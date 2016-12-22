@@ -43,6 +43,7 @@ h2{
     text-decoration: none;
     background: #fb565a;
     color: #fff;
+    transition: all 0.3s ease-in-out;
 }
 .btn:hover{
     background-color: #d6494d;
@@ -89,6 +90,7 @@ h2{
     text-decoration: none;
     text-transform: uppercase;
     padding-bottom: 4px;
+    transition: all 0.3s ease-in-out;
 }
 .main-menu a:hover{
     color: #fb565a;
@@ -115,6 +117,7 @@ h2{
     background-repeat: no-repeat;
     background-position: 5px 33px;
     text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
 }
 .card:hover{
     color: #fb565a;
@@ -169,7 +172,7 @@ body > input[type="radio"]{
 .slider-controls{
     position: absolute;
     clear: both;
-    bottom: 87px;
+    bottom: 0;
     left: 47%;
     font-size: 0;
 }
@@ -186,13 +189,18 @@ body > input[type="radio"]{
 .slider-controls label:last-child{
     margin-right: 0;
 }
-.slide_1, .slide_2, .slide_3{
-    display: none;
+.slide_1, .slide_2, .slide_3 {
+    /*display: none;*/
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 #btn-1:checked ~ .slider .slide_1,
 #btn-2:checked ~ .slider .slide_2,
 #btn-3:checked ~ .slider .slide_3{
-    display: block;
+    /*display: block;*/
+    opacity: 1;
 }
 #btn-1:checked ~ .slider label[for="btn-1"],
 #btn-2:checked ~ .slider label[for="btn-2"],
@@ -316,6 +324,7 @@ body > input[type="radio"]{
     margin-right: 118px;
     vertical-align: middle;
     opacity: 0.2;
+    transition: opacity 0.3s ease-in-out;
 }
 .clients a:last-child{
     margin-right: 0;
@@ -377,6 +386,7 @@ body > input[type="radio"]{
     background: #f1f1f1;
     color: #000;
     line-height: 34px;
+    transition: all 0.3s ease-in-out;
 }
 .pages .page-number{
     width: 34px;
@@ -501,6 +511,7 @@ body > input[type="radio"]{
     border-radius: 50%;
     background-color: #e1e1e1;
     margin-right: 26px;
+    transition: all 0.3s ease-in-out;
 }
 .social:last-child{
     margin-right: 0;
@@ -753,6 +764,7 @@ body > input[type="radio"]{
     background: #f1f1f1;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    transition: all 0.3s ease-in-out;
 }
 .product-item:hover .top-bar{
     background: #797979;
@@ -776,7 +788,8 @@ body > input[type="radio"]{
     height: 200px;
     padding: 33px 20px 0px 20px;
     background: #fff;
-    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 .price-hover b{
     font-size: 18px;
@@ -803,7 +816,7 @@ body > input[type="radio"]{
     margin-bottom: 10px;
 }
 .product-item:hover .price-hover{
-    display: block; 
+    opacity: 1; 
 }
 /*=============POPUP=============*/
 .popup{
